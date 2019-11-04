@@ -16,5 +16,15 @@ namespace implementacionPPAI
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            notifyIcon1.Text = "HAS SIDO HACKEADO";
+            notifyIcon1.BalloonTipText = "has presionado el boton NO presionar." +
+                "HAS SIDO RE HACKEADO";
+            notifyIcon1.BalloonTipTitle = "notificacion";
+            notifyIcon1.Icon = SystemIcons.Application;
+            notifyIcon1.ShowBalloonTip(1000);
+        }
     }
 }
