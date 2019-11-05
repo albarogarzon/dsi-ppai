@@ -16,7 +16,7 @@ namespace implementacionPPAI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PantallaReporteTI());
+            Application.Run(new PantallaInicio());
         }
     }
 }

@@ -26,5 +26,15 @@ namespace implementacionPPAI
             notifyIcon1.Icon = SystemIcons.Application;
             notifyIcon1.ShowBalloonTip(1000);
         }
+
+        private void checkedListBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton6_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
