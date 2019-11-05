@@ -45,16 +45,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ConstructorInformeEnPantallaTI.cs" />
+    <Compile Include="ConstructorInformeExcelTI.cs" />
+    <Compile Include="ConstructorInformePDFTI.cs" />
+    <Compile Include="DirectorConstruccionInformeTiemposInterveciones.cs" />
+    <Compile Include="PantallaReporteTI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="PantallaReporteTI.Designer.cs">
+      <DependentUpon>PantallaReporteTI.cs</DependentUpon>
     </Compile>
+    <Compile Include="GestorReporteTiempoIntervencion.cs" />
+    <Compile Include="IConstructorInformeTI.cs" />
+    <Compile Include="InformeTiemposIntervecion.cs" />
+    <Compile Include="InformeTiemposIntervecionesExcel.cs" />
+    <Compile Include="InformeTiemposIntervecionesPDF.cs" />
+    <Compile Include="PantallaVisualizacionInformeTI.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="PantallaReporteTI.resx">
+      <DependentUpon>PantallaReporteTI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

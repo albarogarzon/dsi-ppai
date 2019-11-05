@@ -1,6 +1,6 @@
 ﻿namespace implementacionPPAI
 {
-    partial class Form1
+    partial class PantallaReporteTI
     {
         /// <summary>
         /// Variable del diseñador necesaria.

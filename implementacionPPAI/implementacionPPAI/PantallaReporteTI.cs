@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace implementacionPPAI
 {
-    public partial class Form1 : Form
+    public partial class PantallaReporteTI : Form
     {
-        public Form1()
+        public PantallaReporteTI()
         {
             InitializeComponent();
         }
