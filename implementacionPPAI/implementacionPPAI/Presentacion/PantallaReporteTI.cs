@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using implementacionPPAI.Entidades;
 
 namespace implementacionPPAI
 {
@@ -35,6 +36,11 @@ namespace implementacionPPAI
         private void radioButton6_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void PantallaReporteTI_Load(object sender, EventArgs e)
+        {
+          
         }
     }
 }

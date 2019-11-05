@@ -49,16 +49,22 @@
     <Compile Include="ConstructorInformeExcelTI.cs" />
     <Compile Include="ConstructorInformePDFTI.cs" />
     <Compile Include="DirectorConstruccionInformeTiemposInterveciones.cs" />
-    <Compile Include="PantallaInicio.cs">
+    <Compile Include="Entidades\Bombero.cs" />
+    <Compile Include="Entidades\Estado.cs" />
+    <Compile Include="Entidades\Gravedad.cs" />
+    <Compile Include="Entidades\HistorialIntervencion.cs" />
+    <Compile Include="Entidades\Intervencion.cs" />
+    <Compile Include="Entidades\TipoSiniestro.cs" />
+    <Compile Include="Presentacion\PantallaInicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallaInicio.Designer.cs">
+    <Compile Include="Presentacion\PantallaInicio.Designer.cs">
       <DependentUpon>PantallaInicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallaReporteTI.cs">
+    <Compile Include="Presentacion\PantallaReporteTI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallaReporteTI.Designer.cs">
+    <Compile Include="Presentacion\PantallaReporteTI.Designer.cs">
       <DependentUpon>PantallaReporteTI.cs</DependentUpon>
     </Compile>
     <Compile Include="GestorReporteTiempoIntervencion.cs" />
@@ -69,10 +75,10 @@
     <Compile Include="PantallaVisualizacionInformeTI.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="PantallaInicio.resx">
+    <EmbeddedResource Include="Presentacion\PantallaInicio.resx">
       <DependentUpon>PantallaInicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallaReporteTI.resx">
+    <EmbeddedResource Include="Presentacion\PantallaReporteTI.resx">
       <DependentUpon>PantallaReporteTI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -96,6 +102,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

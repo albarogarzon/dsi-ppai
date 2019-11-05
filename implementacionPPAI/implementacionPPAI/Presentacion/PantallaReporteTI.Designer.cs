@@ -44,8 +44,8 @@
             this.chkNivelesGravedad = new System.Windows.Forms.CheckedListBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.groupBoxTipoTiempo = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.groupBoxTipoVisualizacion = new System.Windows.Forms.GroupBox();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
@@ -198,17 +198,6 @@
             this.groupBoxTipoTiempo.TabIndex = 17;
             this.groupBoxTipoTiempo.TabStop = false;
             // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(26, 42);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(76, 17);
-            this.radioButton2.TabIndex = 18;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Respuesta";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
@@ -219,6 +208,17 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Cierre";
             this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(26, 42);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(76, 17);
+            this.radioButton2.TabIndex = 18;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Respuesta";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // groupBoxTipoVisualizacion
             // 
@@ -297,6 +297,7 @@
             this.Controls.Add(this.btnConfirmar);
             this.Name = "PantallaReporteTI";
             this.Text = "Reporte de tiempos de intervecion";
+            this.Load += new System.EventHandler(this.PantallaReporteTI_Load);
             this.groupBoxTipoTiempo.ResumeLayout(false);
             this.groupBoxTipoTiempo.PerformLayout();
             this.groupBoxTipoVisualizacion.ResumeLayout(false);
