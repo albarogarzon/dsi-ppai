@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace implementacionPPAI.Entidades
+namespace implementacionPPAI.entidades
 {
-    class Gravedad
+    public class Gravedad
     {
         private string descripcion;
         private string nombre;
@@ -15,6 +15,22 @@ namespace implementacionPPAI.Entidades
         {
             this.Descripcion = descripcion;
             this.Nombre = nombre;
+        }
+
+        public void setDescripcion(string descripcion){
+            this.descripcion = descripcion;
+        }
+        public void setNombre(string nombre){
+            this.nombre = nombre;
+            
+        }
+
+        public string getDescripcion(){
+            return this.descripcion;
+        }
+
+        public string getNombre(){
+            return this.nombre;
         }
 
         public string Descripcion { get => descripcion; set => descripcion = value; }

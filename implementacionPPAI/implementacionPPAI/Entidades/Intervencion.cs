@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace implementacionPPAI.entidades
 {
-    class Intervencion
+    public class Intervencion
     {
         private string domicilioReportado;
         private string nombreApellidoInformante;
@@ -31,6 +31,7 @@ namespace implementacionPPAI.entidades
             this.gravedad = gravedad;
             this.tipoSiniestro = tipoSiniestro;
             this.encargado = encargado;
+           
         }
 
         public string DomicilioReportado { get => domicilioReportado; set => domicilioReportado = value; }
@@ -56,6 +57,46 @@ namespace implementacionPPAI.entidades
             return duracion;
         }
 
+        public bool esFinalizada(){
+            if(this.estadoActual.esFinalizada()){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        public bool esDelPeriodo(DateTime fechaInicioPeriodo, DateTime fechaFinPeriodo)
+        {
+            DateTime fechaFinIntervencion = historiales.Last().getFechaHoraHasta();
+            if((fechaFinIntervencion >= fechaInicioPeriodo) && (fechaFinIntervencion <= fechaFinPeriodo)){
+                return true;
+            }else{
+                return false;
+            }
+            
+        }
+
+        public List<string> obtenerDatos(){
+            List<string> datos = new List<string>();
+            string resumenTrabajo = this.getResumenTrabajoEfectuado();
+            string nombreEncargado = this.encargado.getNombre();
+            string apellidoEncargado = this.encargado.getApellido();
+            string cantidadDeDotaciones = 
+        }
+
+        public string getNombreTipoSiniestro(){
+            return tipoSiniestro.getNombre();
+        }
+
+        public string getNombreGravedad(){
+            return this.gravedad.getNombre();
+        }
+
+        public string getResumenTrabajoEfectuado(){
+            return this.resumenTrabajoEfectuado;
+        }
+
+        public int get
             
     }
 }

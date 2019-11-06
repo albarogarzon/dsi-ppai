@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace implementacionPPAI
 {
-    class GestorReporteTiempoIntervencion
+    public class GestorReporteTiempoIntervencion
     {
         private DateTime fechaHoraDesdePeriodo, fechaHoraHastaPeriodo, promedioDuracion;
-        private string seleccionTipoSiniestro, seleccionGravedad, seleccionTiempoAnalizar;
+        private List<string> seleccionTipoSiniestro, seleccionGravedad;
+        private string tiempoAnalizar;
         private List<TimeSpan> duracionIntervenciones;
-        private List<entidades.Intervencion> intervencionesFiltradas;
+        private List<entidades.Intervencion> intervencionesFiltradas, intervenciones, intervencionesFinalizadas;
+       
         
 
         public void tomarSeleccionPeriodo(DateTime fechaHoraDesde, DateTime fechaHoraHasta){
@@ -19,16 +21,51 @@ namespace implementacionPPAI
             this.setFechaHoraHastaPeriodo(fechaHoraHasta);
         }
 
-        public void tomarSeleccionTipoSiniestro(string tipoSiniestro){
-            this.seleccionTipoSiniestro(tipoSiniestro);
+        public void tomarSeleccionTipoSiniestro(List<string> listaTiposSiniestro){
+            foreach(string tipoSiniestro in listaTiposSiniestro){
+                this.setSeleccionTipoSiniestro(tipoSiniestro);
+            }
         }
         
-        public void tomarSeleccionGravedad(string gravedad){
-            this.setSeleccionGravedad(gravedad);
+        public void tomarSeleccionGravedad(List<string> listaGravedad){
+            foreach(string gravedad in listaGravedad){
+                this.setSeleccionGravedad(gravedad);
+            }
         }
+       
 
         public void tomarSeleccionTiempoAnalizar(string timepoAnalizar){
             this.setSeleccionTiempoAnalizar(tiempoAnalizar);
+        }
+
+
+
+        public void buscarIntervencionesFinalizadas(){
+            foreach(entidades.Intervencion intervencion in this.intervenciones){
+                if (intervencion.esFinalizada()){
+                    this.intervencionesFinalizadas.Add(intervencion);
+                }
+            } 
+        }
+
+        public void filtrarIntervenciones(){
+            foreach(entidades.Intervencion intervencion in this.intervencionesFinalizadas){
+               if(seleccionTipoSiniestro.Contains(intervencion.getNombreTipoSiniestro()) && seleccionGravedad.Contains(intervencion.getNombreGravedad())){
+                    if(intervencion.esDelPeriodo(this.fechaHoraDesdePeriodo, this.fechaHoraHastaPeriodo)){
+                        this.intervencionesFiltradas.Add(intervencion);
+                    }
+                }
+            }
+        }
+                                    
+        public void obtenerDuracionIntervenciones(){
+           foreach(entidades.Intervencion intervencion in intervencionesFiltradas){
+                duracionIntervenciones.Add(intervencion.calcularDuracion());
+           }
+        }
+
+        public void obtenerDatosIntervenciones(){
+            
         }
 
 
@@ -36,27 +73,15 @@ namespace implementacionPPAI
             this.fechaHoraDesdePeriodo = fechaHoraDesde;
         }
 
-        public void buscarIntervencionesFinalizadas(){
-            //TODO
-        }
-        public void filtrarIntervenciones(){
-            //TODO
-        }
-        
-        public void calcularDuracionIntervencion(){
-           foreach(entidades.Intervencion intervencion in intervencionesFiltradas){
-                duracionIntervenciones.Add(intervencion.calcularDuracion());
-            }
-        }
-
         public void setFechaHoraHastaPeriodo(DateTime fechaHoraHasta){
             this.fechaHoraHastaPeriodo = fechaHoraHasta;
         }
-        public void setSeleccionTipoSiniestro(string tipoSiniestro){
-            this.seleccionTipoSiniestro = tipoSiniestro;
+        public void setSeleccionTipoSiniestro(string tiposSiniestro){
+            this.seleccionTipoSiniestro.Add(tiposSiniestro);
         }
+            
         public void setSeleccionGravedad(string gravedad){
-            this.seleccionGravedad = gravedad;
+            this.seleccionGravedad.Add(gravedad);
         }
         public void setSeleccionTiempoAnalizar(string tiempoAnalizar){
             this.seleccionTiempoAnalizar = tiempoAnalizar;

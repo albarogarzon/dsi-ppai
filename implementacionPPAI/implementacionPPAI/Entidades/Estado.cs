@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace implementacionPPAI.entidades
 {
-    class Estado  
+    public class Estado  
     {
         private string ambito;
         private string descripcion;
@@ -51,6 +51,14 @@ namespace implementacionPPAI.entidades
                 return true;
             }else{
                 return false;
+            }
+        }
+
+        public bool esFinalizada(){
+            if(this.getNombre() == "Finalizada"){
+                return true;
+            }else{
+                return true;
             }
         }
     }

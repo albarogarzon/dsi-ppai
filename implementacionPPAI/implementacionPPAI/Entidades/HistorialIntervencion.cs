@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace implementacionPPAI.entidades
 {
-    class HistorialIntervencion
+    public class HistorialIntervencion
     {
         private DateTime fechaHoraDesde;
         private DateTime fechaHoraHasta;
         private Estado estado;
+
 
         public HistorialIntervencion(DateTime fechaHoraDesde)
         {
