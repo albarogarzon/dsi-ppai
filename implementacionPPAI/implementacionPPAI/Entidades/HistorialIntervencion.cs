@@ -13,10 +13,10 @@ namespace implementacionPPAI.entidades
         private Estado estado;
 
 
-        public HistorialIntervencion(DateTime fechaHoraDesde)
+        public HistorialIntervencion(DateTime fechaHoraDesde, DateTime fechaHoraHasta)
         {
-            //TODO
-            this.FechaHoraDesde = fechaHoraDesde;
+            this.fechaHoraDesde = fechaHoraDesde;
+            this.fechaHoraHasta = fechaHoraHasta;
         }
 
 

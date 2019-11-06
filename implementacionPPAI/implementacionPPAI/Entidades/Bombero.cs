@@ -16,13 +16,6 @@ namespace implementacionPPAI.entidades
         private string nombre;
         private int telefono;
 
-        public bool Activo { get => activo; set => activo = value; }
-        public string Apellido { get => apellido; set => apellido = value; }
-        public string Direccion { get => direccion; set => direccion = value; }
-        public int Dni { get => dni; set => dni = value; }
-        public string Email { get => email; set => email = value; }
-        public string Nombre { get => nombre; set => nombre = value; }
-        public int Telefono { get => telefono; set => telefono = value; }
     
         public string getNombre(){
             return this.nombre;
