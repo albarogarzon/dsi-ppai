@@ -14,7 +14,7 @@ namespace implementacionPPAI
            this.constructor = constructor;
         }
 
-        public void construir(TimeSpan tiempoPromedio, List<List<string>> datosIntervenciones, DateTime fechaHoraDesdePeriodo, DateTime fechaHoraHastaPeriodo, string nombreTipoSiniestro, string nombreTipoGravedad, string tiempoAnalizar){
+        public void construir(TimeSpan tiempoPromedio, List<List<string>> datosIntervenciones, DateTime fechaHoraDesdePeriodo, DateTime fechaHoraHastaPeriodo, List<string> nombresTipoSiniestro, List<string> nombresTipoGravedad, string tiempoAnalizar){
             //TODO
         }
 

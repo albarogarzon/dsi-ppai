@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace implementacionPPAI
 {
-    interface IConstructorInformeTI
+    public interface IConstructorInformeTI
     {
         InformeTiemposIntervencion construirProducto();
         void construirDetalleIntervenciones(List<List<string>> datosIntervenciones);
-        void construirEncabezado(TimeSpan tiempoPromedio, DateTime fechaHoraDesdePeriodo, DateTime fechaHoraHastaPeriodo, string nombreTipoSiniestro, string nombreTipoGravedad, string tiempoAnalizar);
+        void construirEncabezado(TimeSpan tiempoPromedio, DateTime fechaHoraDesdePeriodo, DateTime fechaHoraHastaPeriodo, List<string> nombreTipoSiniestro, List<string> nombreTipoGravedad, string tiempoAnalizar);
         InformeTiemposIntervencion obtenerProducto();
     }
 }

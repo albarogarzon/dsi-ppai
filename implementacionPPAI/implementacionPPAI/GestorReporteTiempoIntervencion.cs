@@ -16,6 +16,14 @@ namespace implementacionPPAI.Entidades
         private List<List<string>> datosIntervenciones;
         private TimeSpan promedioDuracion;
        
+        public GestorReporteTiempoIntervencion()
+        {
+            this.duracionIntervenciones = new List<TimeSpan>();
+            this.intervencionesFinalizadas = new List<Intervencion>();
+            this.intervencionesFiltradas = new List<Intervencion>();
+            this.seleccionGravedad = new List<string>();
+            this.seleccionTipoSiniestro = new List<string>();
+        }
 
         public void tomarSeleccionPeriodo(DateTime fechaHoraDesde, DateTime fechaHoraHasta){
             this.setFechaHoraDesdePeriodo(fechaHoraDesde);
@@ -84,6 +92,14 @@ namespace implementacionPPAI.Entidades
 
         public void calcularPromedioDuracionIntervenciones(){
             this.promedioDuracion = new TimeSpan(Convert.ToInt64(this.duracionIntervenciones.Average(t => t.Ticks)));
+
+        }
+
+        public void generarReporte()
+        {
+            ConstructorInformeEnPantallaTI constructorInformePantalla = new ConstructorInformeEnPantallaTI();
+            DirectorConstruccionInformeTiemposInterveciones directorConstruccionInforme = new DirectorConstruccionInformeTiemposInterveciones(constructorInformePantalla);
+            directorConstruccionInforme.construir(this.promedioDuracion, this.datosIntervenciones, this.fechaHoraDesdePeriodo, this.fechaHoraHastaPeriodo, this.seleccionTipoSiniestro, this.seleccionGravedad, this.seleccionTiempoAnalizar);
 
         }
 
