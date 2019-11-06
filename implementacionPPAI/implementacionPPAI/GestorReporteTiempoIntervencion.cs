@@ -12,9 +12,10 @@ namespace implementacionPPAI
         private List<string> seleccionTipoSiniestro, seleccionGravedad;
         private string tiempoAnalizar;
         private List<TimeSpan> duracionIntervenciones;
-        private List<entidades.Intervencion> intervencionesFiltradas, intervenciones, intervencionesFinalizadas;
+        private List<entidades.Intervencion> intervenciones, intervencionesFinalizadas, intervencionesFiltradas;
+        private List<List<string>> datosIntervenciones;
+        private TimeSpan promedioDuracion;
        
-        
 
         public void tomarSeleccionPeriodo(DateTime fechaHoraDesde, DateTime fechaHoraHasta){
             this.setFechaHoraDesdePeriodo(fechaHoraDesde);
@@ -59,14 +60,23 @@ namespace implementacionPPAI
         }
                                     
         public void obtenerDuracionIntervenciones(){
-           foreach(entidades.Intervencion intervencion in intervencionesFiltradas){
+           foreach(entidades.Intervencion intervencion in this.intervencionesFiltradas){
                 duracionIntervenciones.Add(intervencion.calcularDuracion());
            }
         }
 
         public void obtenerDatosIntervenciones(){
-            
+            foreach(entidades.Intervencion intervencion in this.intervencionesFiltradas){
+                datosIntervenciones.Add(intervencion.obtenerDatos());
+            }
         }
+
+        public void calcularPromedioDuracionIntervenciones(){
+            this.promedioDuracion = new TimeSpan(Convert.ToInt64(this.duracionIntervenciones.Average(t => t.Ticks)));
+
+        }
+
+            
 
 
         public void setFechaHoraDesdePeriodo(DateTime fechaHoraDesde){
