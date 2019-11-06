@@ -71,6 +71,7 @@ namespace implementacionPPAI.Entidades
             
         }
 
+        
         public List<string> obtenerDatos(){
             List<string> datos = new List<string>();
             string resumenTrabajo = this.getResumenTrabajoEfectuado();
@@ -78,6 +79,7 @@ namespace implementacionPPAI.Entidades
             string apellidoEncargado = this.encargado.getApellido();
             string cantidadDeDotaciones = this.contarDotaciones().ToString();
 
+            //Orden de los datos pro fila
             datos.Add(resumenTrabajo);
             datos.Add(nombreEncargado);
             datos.Add(apellidoEncargado);
