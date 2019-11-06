@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace implementacionPPAI.Entidades
+namespace implementacionPPAI.entidades
 {
     public class Bombero
     {

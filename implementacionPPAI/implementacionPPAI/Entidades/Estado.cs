@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace implementacionPPAI.Entidades
+namespace implementacionPPAI.entidades
 {
-    class Estado
+    class Estado  
     {
         private string ambito;
         private string descripcion;
@@ -14,13 +14,44 @@ namespace implementacionPPAI.Entidades
 
         public Estado(string ambito, string descripcion, string nombre)
         {
-            this.Ambito = ambito;
-            this.Descripcion = descripcion;
-            this.Nombre = nombre;
+            this.ambito = ambito;
+            this.descripcion = descripcion;
+            this.nombre = nombre;
         }
 
-        public string Ambito { get => ambito; set => ambito = value; }
-        public string Descripcion { get => descripcion; set => descripcion = value; }
-        public string Nombre { get => nombre; set => nombre = value; }
+        public string getAmbito(){
+            return this.ambito;
+        }
+
+        public void setAmbito(string ambito){
+            this.ambito = ambito;
+
+        }
+
+        public string getDescripcion(){
+            return this.descripcion;
+        }
+
+        public void setDescripcion(string descripcion){
+            this.nombre = descripcion;
+
+        }
+
+        public string getNombre(){
+            return this.nombre;
+        }
+
+        public void setNombre(string nombre){
+            this.nombre = nombre;
+
+        }
+
+        public bool esEnCurso(){
+            if (this.getNombre() == "EnCurso"){
+                return true;
+            }else{
+                return false;
+            }
+        }
     }
 }
