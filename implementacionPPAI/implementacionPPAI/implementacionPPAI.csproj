@@ -50,6 +50,7 @@
     <Compile Include="ConstructorInformePDFTI.cs" />
     <Compile Include="DirectorConstruccionInformeTiemposInterveciones.cs" />
     <Compile Include="Entidades\Bombero.cs" />
+    <Compile Include="Entidades\Dotacion.cs" />
     <Compile Include="Entidades\Estado.cs" />
     <Compile Include="Entidades\Gravedad.cs" />
     <Compile Include="Entidades\HistorialIntervencion.cs" />
