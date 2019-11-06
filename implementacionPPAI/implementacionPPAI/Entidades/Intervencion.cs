@@ -18,6 +18,7 @@ namespace implementacionPPAI.entidades
         private Gravedad gravedad;
         private TipoSiniestro tipoSiniestro;
         private Bombero encargado;
+        private List<Dotacion> dotaciones;
 
         public Intervencion(string domicilioReportado, string nombreApellidoInformante, string resumenSiniestroInformante, string resumenTrabajoEfectuado, int telefonoConectado, Estado estadoActual, List<HistorialIntervencion> historial, Gravedad gravedad, TipoSiniestro tipoSiniestro, Bombero encargado)
         {
@@ -34,17 +35,7 @@ namespace implementacionPPAI.entidades
            
         }
 
-        public string DomicilioReportado { get => domicilioReportado; set => domicilioReportado = value; }
-        public string NombreApellidoInformante { get => nombreApellidoInformante; set => nombreApellidoInformante = value; }
-        public string ResumenSiniestroInformante { get => resumenSiniestroInformante; set => resumenSiniestroInformante = value; }
-        public string ResumenTrabajoEfectuado { get => resumenTrabajoEfectuado; set => resumenTrabajoEfectuado = value; }
-        public int TelefonoConectado { get => telefonoConectado; set => telefonoConectado = value; }
-        public Bombero Encargado { get => encargado; set => encargado = value; }
-        internal Estado EstadoActual { get => estadoActual; set => estadoActual = value; }
-        internal List<HistorialIntervencion> Historial { get => historial; set => historial = value; }
-        internal Gravedad Gravedad { get => gravedad; set => gravedad = value; }
-        internal TipoSiniestro TipoSiniestro { get => tipoSiniestro; set => tipoSiniestro = value; }
-        
+       
         public TimeSpan calcularDuracion(){
             TimeSpan duracion;
             for(int i = 0; i< historial.Count(); i++){
@@ -81,7 +72,14 @@ namespace implementacionPPAI.entidades
             string resumenTrabajo = this.getResumenTrabajoEfectuado();
             string nombreEncargado = this.encargado.getNombre();
             string apellidoEncargado = this.encargado.getApellido();
-            string cantidadDeDotaciones = 
+            string cantidadDeDotaciones = this.contarDotaciones().ToString();
+
+            datos.Add(resumenTrabajo);
+            datos.Add(nombreEncargado);
+            datos.Add(apellidoEncargado);
+            datos.Add(cantidadDeDotaciones);
+
+            return datos;
         }
 
         public string getNombreTipoSiniestro(){
@@ -96,7 +94,9 @@ namespace implementacionPPAI.entidades
             return this.resumenTrabajoEfectuado;
         }
 
-        public int get
+        public int contarDotaciones(){
+            return dotaciones.Count();
+        }
             
     }
 }
