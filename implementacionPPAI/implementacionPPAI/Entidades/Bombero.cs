@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace implementacionPPAI.entidades
+namespace implementacionPPAI.Entidades
 {
     public class Bombero
     {
-        private Boolean activo;
+        private bool activo;
         private string apellido;
         private string direccion;
         private int dni;

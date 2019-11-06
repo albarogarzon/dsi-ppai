@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace implementacionPPAI.entidades
+namespace implementacionPPAI.Entidades
 {
     public class TipoSiniestro
     {
@@ -13,8 +13,8 @@ namespace implementacionPPAI.entidades
 
         public TipoSiniestro(string descripcion, string nombre)
         {
-            this.Descripcion = descripcion;
-            this.Nombre = nombre;
+            this.descripcion = descripcion;
+            this.nombre = nombre;
         }
 
         public void setDescripcion(string descripcion){
