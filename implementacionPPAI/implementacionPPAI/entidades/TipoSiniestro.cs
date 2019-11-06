@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace implementacionPPAI.entidades
 {
-    class TipoSiniestro
+    public class TipoSiniestro
     {
         private string descripcion;
         private string nombre;
@@ -17,7 +17,20 @@ namespace implementacionPPAI.entidades
             this.Nombre = nombre;
         }
 
-        public string Descripcion { get => descripcion; set => descripcion = value; }
-        public string Nombre { get => nombre; set => nombre = value; }
+        public void setDescripcion(string descripcion){
+            this.descripcion = descripcion;
+        }
+
+        public void setNombre(string nombre){
+            this.nombre = nombre;
+        }
+
+        public string getDescripcion(){
+            return this.descripcion;
+        }
+
+        public string getNombre(){
+            return this.nombre;
+        }
     }
 }
