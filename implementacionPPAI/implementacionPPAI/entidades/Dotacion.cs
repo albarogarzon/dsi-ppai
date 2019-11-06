@@ -1,8 +1,18 @@
 ﻿using System;
 
-public class Class1
+namespace implementacionPPAI.entidades
 {
-	public Class1()
-	{
-	}
+    public class Dotacion
+    {
+        public Dotacion()
+        {
+        }
+    }
+
+
+
+
+
 }
+
+
