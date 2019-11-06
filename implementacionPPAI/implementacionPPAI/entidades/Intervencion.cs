@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace implementacionPPAI.entidades
+namespace implementacionPPAI.Entidades
 {
     public class Intervencion
     {
@@ -37,14 +37,18 @@ namespace implementacionPPAI.entidades
 
        
         public TimeSpan calcularDuracion(){
-            TimeSpan duracion;
-            for(int i = 0; i< historial.Count(); i++){
+            TimeSpan duracion = new TimeSpan();
+            DateTime fechaHoraDesde = new DateTime();
+            DateTime fechaHoraHasta = new DateTime();
+            for(int i = 0; i< historiales.Count(); i++){
                 if(historiales[i].esEnCurso()){
-                    DateTime fechaHoraDesde = historiales[i].getFechaHoraDesde();
-                    DateTime fechaHoraHasta = historiales[i].getFechaHoraHasta();
-                    duracion = fechaHoraHasta.Subtract(fechaHoraDesde);
+                    fechaHoraDesde = historiales[i].getFechaHoraDesde();
+                    fechaHoraHasta = historiales[i].getFechaHoraHasta();
                 }
             }
+                    
+            duracion = fechaHoraHasta.Subtract(fechaHoraDesde);
+
             return duracion;
         }
 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace implementacionPPAI.entidades
+namespace implementacionPPAI.Entidades
 {
     public class HistorialIntervencion
     {
@@ -38,7 +38,7 @@ namespace implementacionPPAI.entidades
         }
         
         public bool esEnCurso(){
-            return this.Estado.esEnCurso();
+            return this.estado.esEnCurso();
         }
     }
 

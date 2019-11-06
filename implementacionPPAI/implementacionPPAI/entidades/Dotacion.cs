@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace implementacionPPAI.Entidades
 {
-    class Dotacion
+    public class Dotacion
     {
     }
 }

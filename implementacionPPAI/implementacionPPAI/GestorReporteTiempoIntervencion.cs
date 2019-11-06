@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace implementacionPPAI
+namespace implementacionPPAI.Entidades
 {
     public class GestorReporteTiempoIntervencion
     {
-        private DateTime fechaHoraDesdePeriodo, fechaHoraHastaPeriodo, promedioDuracion;
+        private DateTime fechaHoraDesdePeriodo, fechaHoraHastaPeriodo;
         private List<string> seleccionTipoSiniestro, seleccionGravedad;
-        private string tiempoAnalizar;
+        private string seleccionTiempoAnalizar;
         private List<TimeSpan> duracionIntervenciones;
-        private List<entidades.Intervencion> intervenciones, intervencionesFinalizadas, intervencionesFiltradas;
+        private List<Intervencion> intervenciones, intervencionesFinalizadas, intervencionesFiltradas;
         private List<List<string>> datosIntervenciones;
         private TimeSpan promedioDuracion;
        
@@ -36,13 +36,24 @@ namespace implementacionPPAI
        
 
         public void tomarSeleccionTiempoAnalizar(string timepoAnalizar){
-            this.setSeleccionTiempoAnalizar(tiempoAnalizar);
+            this.setSeleccionTiempoAnalizar(seleccionTiempoAnalizar);
+        }
+
+        public void tomarConfirmacionFiltros()
+        {
+            Creacion creador = new Creacion();
+            intervenciones = creador.crear();
+                
+            this.buscarIntervencionesFinalizadas();
+            this.filtrarIntervenciones();
+            this.obtenerDuracionIntervenciones();
+            this.obtenerDatosIntervenciones();
+            this.calcularPromedioDuracionIntervenciones();
         }
 
 
-
         public void buscarIntervencionesFinalizadas(){
-            foreach(entidades.Intervencion intervencion in this.intervenciones){
+            foreach(Intervencion intervencion in this.intervenciones){
                 if (intervencion.esFinalizada()){
                     this.intervencionesFinalizadas.Add(intervencion);
                 }
@@ -50,7 +61,7 @@ namespace implementacionPPAI
         }
 
         public void filtrarIntervenciones(){
-            foreach(entidades.Intervencion intervencion in this.intervencionesFinalizadas){
+            foreach(Intervencion intervencion in this.intervencionesFinalizadas){
                if(seleccionTipoSiniestro.Contains(intervencion.getNombreTipoSiniestro()) && seleccionGravedad.Contains(intervencion.getNombreGravedad())){
                     if(intervencion.esDelPeriodo(this.fechaHoraDesdePeriodo, this.fechaHoraHastaPeriodo)){
                         this.intervencionesFiltradas.Add(intervencion);
@@ -60,13 +71,13 @@ namespace implementacionPPAI
         }
                                     
         public void obtenerDuracionIntervenciones(){
-           foreach(entidades.Intervencion intervencion in this.intervencionesFiltradas){
+           foreach(Intervencion intervencion in this.intervencionesFiltradas){
                 duracionIntervenciones.Add(intervencion.calcularDuracion());
            }
         }
 
         public void obtenerDatosIntervenciones(){
-            foreach(entidades.Intervencion intervencion in this.intervencionesFiltradas){
+            foreach(Intervencion intervencion in this.intervencionesFiltradas){
                 datosIntervenciones.Add(intervencion.obtenerDatos());
             }
         }

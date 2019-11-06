@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace implementacionPPAI
 {
-    class InformeTiemposIntervecion
+    public class InformeTiemposIntervencion
     {
     }
 }

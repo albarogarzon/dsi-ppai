@@ -50,6 +50,7 @@
     <Compile Include="ConstructorInformePDFTI.cs" />
     <Compile Include="DirectorConstruccionInformeTiemposInterveciones.cs" />
     <Compile Include="Entidades\Bombero.cs" />
+    <Compile Include="Entidades\Creacion.cs" />
     <Compile Include="Entidades\Dotacion.cs" />
     <Compile Include="Entidades\Estado.cs" />
     <Compile Include="Entidades\Gravedad.cs" />
@@ -70,7 +71,7 @@
     </Compile>
     <Compile Include="GestorReporteTiempoIntervencion.cs" />
     <Compile Include="IConstructorInformeTI.cs" />
-    <Compile Include="InformeTiemposIntervecion.cs" />
+    <Compile Include="InformeTiemposIntervencion.cs" />
     <Compile Include="InformeTiemposIntervecionesExcel.cs" />
     <Compile Include="InformeTiemposIntervecionesPDF.cs" />
     <Compile Include="PantallaVisualizacionInformeTI.cs" />
