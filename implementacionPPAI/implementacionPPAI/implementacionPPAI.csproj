@@ -57,17 +57,23 @@
     <Compile Include="Entidades\HistorialIntervencion.cs" />
     <Compile Include="Entidades\Intervencion.cs" />
     <Compile Include="Entidades\TipoSiniestro.cs" />
+    <Compile Include="Presentacion\frmSalidaReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmSalidaReporte.Designer.cs">
+      <DependentUpon>frmSalidaReporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\PantallaInicio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\PantallaInicio.Designer.cs">
       <DependentUpon>PantallaInicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\PantallaReporteTI.cs">
+    <Compile Include="Presentacion\PantallaVisualizacionInformeTI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\PantallaReporteTI.Designer.cs">
-      <DependentUpon>PantallaReporteTI.cs</DependentUpon>
+    <Compile Include="Presentacion\PantallaVisualizacionInformeTI.Designer.cs">
+      <DependentUpon>PantallaVisualizacionInformeTI.cs</DependentUpon>
     </Compile>
     <Compile Include="GestorReporteTiempoIntervencion.cs" />
     <Compile Include="IConstructorInformeTI.cs" />
@@ -77,11 +83,14 @@
     <Compile Include="PantallaVisualizacionInformeTI.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\frmSalidaReporte.resx">
+      <DependentUpon>frmSalidaReporte.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PantallaInicio.resx">
       <DependentUpon>PantallaInicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\PantallaReporteTI.resx">
-      <DependentUpon>PantallaReporteTI.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\PantallaVisualizacionInformeTI.resx">
+      <DependentUpon>PantallaVisualizacionInformeTI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

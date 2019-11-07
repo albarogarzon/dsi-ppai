@@ -20,7 +20,7 @@ namespace implementacionPPAI.Entidades
         private Bombero encargado;
         private List<Dotacion> dotaciones;
 
-        public Intervencion(string domicilioReportado, string nombreApellidoInformante, string resumenSiniestroInformante, string resumenTrabajoEfectuado, int telefonoConectado, Estado estadoActual, List<HistorialIntervencion> historial, Gravedad gravedad, TipoSiniestro tipoSiniestro, Bombero encargado)
+        public Intervencion(string domicilioReportado, string nombreApellidoInformante, string resumenSiniestroInformante, string resumenTrabajoEfectuado, int telefonoConectado, Estado estadoActual, List<HistorialIntervencion> historial, Gravedad gravedad, TipoSiniestro tipoSiniestro, Bombero encargado, List<Dotacion> dotaciones)
         {
             this.domicilioReportado = domicilioReportado;
             this.nombreApellidoInformante = nombreApellidoInformante;
@@ -32,10 +32,10 @@ namespace implementacionPPAI.Entidades
             this.gravedad = gravedad;
             this.tipoSiniestro = tipoSiniestro;
             this.encargado = encargado;
-           
+            this.dotaciones = dotaciones;
         }
 
-       
+
         public TimeSpan calcularDuracion(){
             TimeSpan duracion = new TimeSpan();
             DateTime fechaHoraDesde = new DateTime();

@@ -43,9 +43,13 @@ namespace implementacionPPAI.Entidades
         }
        
 
-        public void tomarSeleccionTiempoAnalizar(string timepoAnalizar){
+        public void tomarSeleccionTiempoAnalizar(string seleccionTiempoAnalizar)
+        {
             this.setSeleccionTiempoAnalizar(seleccionTiempoAnalizar);
         }
+
+     
+
 
         public void tomarConfirmacionFiltros()
         {

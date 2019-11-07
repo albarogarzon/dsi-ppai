@@ -42,14 +42,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.chkNivelesGravedad = new System.Windows.Forms.CheckedListBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButtonDuracion = new System.Windows.Forms.RadioButton();
             this.groupBoxTipoTiempo = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButtonCierre = new System.Windows.Forms.RadioButton();
+            this.radioButtonRespuesta = new System.Windows.Forms.RadioButton();
             this.groupBoxTipoVisualizacion = new System.Windows.Forms.GroupBox();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.radioButtonExcel = new System.Windows.Forms.RadioButton();
+            this.radioButtonPDF = new System.Windows.Forms.RadioButton();
+            this.radioButtonPantalla = new System.Windows.Forms.RadioButton();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBoxTipoTiempo.SuspendLayout();
             this.groupBoxTipoVisualizacion.SuspendLayout();
@@ -176,94 +176,93 @@
             this.chkNivelesGravedad.Size = new System.Drawing.Size(120, 64);
             this.chkNivelesGravedad.TabIndex = 13;
             // 
-            // radioButton1
+            // radioButtonDuracion
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(26, 19);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(68, 17);
-            this.radioButton1.TabIndex = 16;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Duracion";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonDuracion.AutoSize = true;
+            this.radioButtonDuracion.Location = new System.Drawing.Point(26, 19);
+            this.radioButtonDuracion.Name = "radioButtonDuracion";
+            this.radioButtonDuracion.Size = new System.Drawing.Size(68, 17);
+            this.radioButtonDuracion.TabIndex = 16;
+            this.radioButtonDuracion.TabStop = true;
+            this.radioButtonDuracion.Text = "Duracion";
+            this.radioButtonDuracion.UseVisualStyleBackColor = true;
             // 
             // groupBoxTipoTiempo
             // 
-            this.groupBoxTipoTiempo.Controls.Add(this.radioButton3);
-            this.groupBoxTipoTiempo.Controls.Add(this.radioButton2);
-            this.groupBoxTipoTiempo.Controls.Add(this.radioButton1);
+            this.groupBoxTipoTiempo.Controls.Add(this.radioButtonCierre);
+            this.groupBoxTipoTiempo.Controls.Add(this.radioButtonRespuesta);
+            this.groupBoxTipoTiempo.Controls.Add(this.radioButtonDuracion);
             this.groupBoxTipoTiempo.Location = new System.Drawing.Point(17, 368);
             this.groupBoxTipoTiempo.Name = "groupBoxTipoTiempo";
             this.groupBoxTipoTiempo.Size = new System.Drawing.Size(200, 100);
             this.groupBoxTipoTiempo.TabIndex = 17;
             this.groupBoxTipoTiempo.TabStop = false;
             // 
-            // radioButton3
+            // radioButtonCierre
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(26, 65);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(52, 17);
-            this.radioButton3.TabIndex = 19;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Cierre";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButtonCierre.AutoSize = true;
+            this.radioButtonCierre.Location = new System.Drawing.Point(26, 65);
+            this.radioButtonCierre.Name = "radioButtonCierre";
+            this.radioButtonCierre.Size = new System.Drawing.Size(52, 17);
+            this.radioButtonCierre.TabIndex = 19;
+            this.radioButtonCierre.TabStop = true;
+            this.radioButtonCierre.Text = "Cierre";
+            this.radioButtonCierre.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioButtonRespuesta
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(26, 42);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(76, 17);
-            this.radioButton2.TabIndex = 18;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Respuesta";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonRespuesta.AutoSize = true;
+            this.radioButtonRespuesta.Location = new System.Drawing.Point(26, 42);
+            this.radioButtonRespuesta.Name = "radioButtonRespuesta";
+            this.radioButtonRespuesta.Size = new System.Drawing.Size(76, 17);
+            this.radioButtonRespuesta.TabIndex = 18;
+            this.radioButtonRespuesta.TabStop = true;
+            this.radioButtonRespuesta.Text = "Respuesta";
+            this.radioButtonRespuesta.UseVisualStyleBackColor = true;
             // 
             // groupBoxTipoVisualizacion
             // 
-            this.groupBoxTipoVisualizacion.Controls.Add(this.radioButton4);
-            this.groupBoxTipoVisualizacion.Controls.Add(this.radioButton5);
-            this.groupBoxTipoVisualizacion.Controls.Add(this.radioButton6);
+            this.groupBoxTipoVisualizacion.Controls.Add(this.radioButtonExcel);
+            this.groupBoxTipoVisualizacion.Controls.Add(this.radioButtonPDF);
+            this.groupBoxTipoVisualizacion.Controls.Add(this.radioButtonPantalla);
             this.groupBoxTipoVisualizacion.Location = new System.Drawing.Point(17, 510);
             this.groupBoxTipoVisualizacion.Name = "groupBoxTipoVisualizacion";
             this.groupBoxTipoVisualizacion.Size = new System.Drawing.Size(200, 100);
             this.groupBoxTipoVisualizacion.TabIndex = 18;
             this.groupBoxTipoVisualizacion.TabStop = false;
             // 
-            // radioButton4
+            // radioButtonExcel
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(26, 65);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(51, 17);
-            this.radioButton4.TabIndex = 19;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Excel";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButtonExcel.AutoSize = true;
+            this.radioButtonExcel.Location = new System.Drawing.Point(26, 65);
+            this.radioButtonExcel.Name = "radioButtonExcel";
+            this.radioButtonExcel.Size = new System.Drawing.Size(51, 17);
+            this.radioButtonExcel.TabIndex = 19;
+            this.radioButtonExcel.TabStop = true;
+            this.radioButtonExcel.Text = "Excel";
+            this.radioButtonExcel.UseVisualStyleBackColor = true;
             // 
-            // radioButton5
+            // radioButtonPDF
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(26, 42);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(46, 17);
-            this.radioButton5.TabIndex = 18;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "PDF";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.radioButtonPDF.AutoSize = true;
+            this.radioButtonPDF.Location = new System.Drawing.Point(26, 42);
+            this.radioButtonPDF.Name = "radioButtonPDF";
+            this.radioButtonPDF.Size = new System.Drawing.Size(46, 17);
+            this.radioButtonPDF.TabIndex = 18;
+            this.radioButtonPDF.TabStop = true;
+            this.radioButtonPDF.Text = "PDF";
+            this.radioButtonPDF.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // radioButtonPantalla
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(26, 19);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(63, 17);
-            this.radioButton6.TabIndex = 16;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Pantalla";
-            this.radioButton6.UseVisualStyleBackColor = true;
-            this.radioButton6.CheckedChanged += new System.EventHandler(this.radioButton6_CheckedChanged);
+            this.radioButtonPantalla.AutoSize = true;
+            this.radioButtonPantalla.Location = new System.Drawing.Point(26, 19);
+            this.radioButtonPantalla.Name = "radioButtonPantalla";
+            this.radioButtonPantalla.Size = new System.Drawing.Size(63, 17);
+            this.radioButtonPantalla.TabIndex = 16;
+            this.radioButtonPantalla.TabStop = true;
+            this.radioButtonPantalla.Text = "Pantalla";
+            this.radioButtonPantalla.UseVisualStyleBackColor = true;
             // 
             // btnCancelar
             // 
@@ -322,14 +321,14 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckedListBox chkNivelesGravedad;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButtonDuracion;
         private System.Windows.Forms.GroupBox groupBoxTipoTiempo;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButtonCierre;
+        private System.Windows.Forms.RadioButton radioButtonRespuesta;
         private System.Windows.Forms.GroupBox groupBoxTipoVisualizacion;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton radioButtonExcel;
+        private System.Windows.Forms.RadioButton radioButtonPDF;
+        private System.Windows.Forms.RadioButton radioButtonPantalla;
         private System.Windows.Forms.Button btnCancelar;
     }
 }

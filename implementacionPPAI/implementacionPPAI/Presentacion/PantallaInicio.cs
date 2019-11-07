@@ -18,7 +18,8 @@ namespace implementacionPPAI
             InitializeComponent();
         }
 
-        private void generarReporteDeTiemposDeIntervencionToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void generarReporteDeTiemposDeIntervencionToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             PantallaReporteTI PI = new PantallaReporteTI();
             PI.ShowDialog();
