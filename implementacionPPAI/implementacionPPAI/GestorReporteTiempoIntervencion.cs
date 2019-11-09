@@ -12,7 +12,7 @@ namespace implementacionPPAI.Entidades
         private List<string> seleccionTipoSiniestro, seleccionGravedad;
         private string seleccionTiempoAnalizar;
         private List<TimeSpan> duracionIntervenciones;
-        private List<Intervencion> intervenciones, intervencionesFinalizadas, intervencionesFiltradas;
+        private List<Intervencion> intervenciones, intervencionesFinalizadas, intervencionesFiltradasPorGravedadYSiniestro, intervencionesFiltradas;
         private List<List<string>> datosIntervenciones;
         private TimeSpan promedioDuracion;
        
@@ -53,7 +53,8 @@ namespace implementacionPPAI.Entidades
             intervenciones = creador.crear();
                 
             this.buscarIntervencionesFinalizadas();
-            this.filtrarIntervenciones();
+            this.filtrarIntervencionesPorGravedadYSiniestro(); // Lanzar mensaje si no econtro
+            this.filtrarIntervencionesPorPeriodoSeleccionado();// Lanzar mensaje si no encontro
             this.obtenerDuracionIntervenciones();
             this.obtenerDatosIntervenciones();
             this.calcularPromedioDuracionIntervenciones();
@@ -62,22 +63,44 @@ namespace implementacionPPAI.Entidades
 
         public void buscarIntervencionesFinalizadas(){
             foreach(Intervencion intervencion in this.intervenciones){
-                if (intervencion.esFinalizada()){
+                if (intervencion.esFinalizada() || intervencion.finalizo()){
                     this.intervencionesFinalizadas.Add(intervencion);
                 }
             } 
         }
 
-        public void filtrarIntervenciones(){
+        public bool filtrarIntervencionesPorGravedadYSiniestro(){
+            bool existen = false;
             foreach(Intervencion intervencion in this.intervencionesFinalizadas){
                if(seleccionTipoSiniestro.Contains(intervencion.getNombreTipoSiniestro()) && seleccionGravedad.Contains(intervencion.getNombreGravedad())){
-                    if(intervencion.esDelPeriodo(this.fechaHoraDesdePeriodo, this.fechaHoraHastaPeriodo)){
-                        this.intervencionesFiltradas.Add(intervencion);
-                    }
+                   this.intervencionesFiltradasPorGravedadYSiniestro.Add(intervencion);
+                    existen = true;
+               }
+            }
+            return existen;
+        }
+            
+                    
+                    
+
+        public bool filtrarIntervencionesPorPeriodoSeleccionado()
+        {
+            bool existen = false;
+            foreach (Intervencion intervencion in this.intervencionesFiltradasPorGravedadYSiniestro)
+            {
+                if (intervencion.finalizoEnElPeriodo(this.fechaHoraDesdePeriodo, this.fechaHoraHastaPeriodo))
+                {
+                    this.intervencionesFiltradas.Add(intervencion);
+                    existen = true;
                 }
             }
+            return existen;
+           
         }
-                                    
+
+                
+              
+
         public void obtenerDuracionIntervenciones(){
            foreach(Intervencion intervencion in this.intervencionesFiltradas){
                 duracionIntervenciones.Add(intervencion.calcularDuracion());

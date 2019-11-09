@@ -12,7 +12,7 @@ namespace implementacionPPAI.Entidades
         private string nombreApellidoInformante;
         private string resumenSiniestroInformante;
         private string resumenTrabajoEfectuado;
-        private int telefonoConectado;
+        private string telefonoContacto;
         private Estado estadoActual;
         List<HistorialIntervencion> historiales;
         private Gravedad gravedad;
@@ -20,18 +20,19 @@ namespace implementacionPPAI.Entidades
         private Bombero encargado;
         private List<Dotacion> dotaciones;
 
-        public Intervencion(string domicilioReportado, string nombreApellidoInformante, string resumenSiniestroInformante, string resumenTrabajoEfectuado, int telefonoConectado, Estado estadoActual, List<HistorialIntervencion> historial, Gravedad gravedad, TipoSiniestro tipoSiniestro, Bombero encargado)
+        public Intervencion(string domicilioReportado, string nombreApellidoInformante, string resumenSiniestroInformante, string resumenTrabajoEfectuado, string telefonoContacto, Estado estadoActual, List<HistorialIntervencion> historial, Gravedad gravedad, TipoSiniestro tipoSiniestro, Bombero encargado, List<Dotacion> dotaciones)
         {
             this.domicilioReportado = domicilioReportado;
             this.nombreApellidoInformante = nombreApellidoInformante;
             this.resumenSiniestroInformante = resumenSiniestroInformante;
             this.resumenTrabajoEfectuado = resumenTrabajoEfectuado;
-            this.telefonoConectado = telefonoConectado;
+            this.telefonoContacto = telefonoContacto;
             this.estadoActual = estadoActual;
             this.historiales = historial;
             this.gravedad = gravedad;
             this.tipoSiniestro = tipoSiniestro;
             this.encargado = encargado;
+            this.dotaciones = dotaciones;
            
         }
 
@@ -60,9 +61,29 @@ namespace implementacionPPAI.Entidades
             }
         }
 
-        public bool esDelPeriodo(DateTime fechaInicioPeriodo, DateTime fechaFinPeriodo)
+        public bool finalizo()
         {
-            DateTime fechaFinIntervencion = historiales.Last().getFechaHoraHasta();
+           
+            foreach(HistorialIntervencion historial in historiales)
+            {
+                if (historial.esFinalizada())
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool finalizoEnElPeriodo(DateTime fechaInicioPeriodo, DateTime fechaFinPeriodo)
+        {
+            DateTime fechaFinIntervencion = new DateTime();
+            foreach(HistorialIntervencion historial in this.historiales){
+                if(historial.esFinalizada()){
+                    fechaFinIntervencion = historial.getFechaHoraDesde();
+                    break;
+                }
+            }
+            
             if((fechaFinIntervencion >= fechaInicioPeriodo) && (fechaFinIntervencion <= fechaFinPeriodo)){
                 return true;
             }else{
@@ -79,7 +100,7 @@ namespace implementacionPPAI.Entidades
             string apellidoEncargado = this.encargado.getApellido();
             string cantidadDeDotaciones = this.contarDotaciones().ToString();
 
-            //Orden de los datos pro fila
+            //Orden de los datos por fila
             datos.Add(resumenTrabajo);
             datos.Add(nombreEncargado);
             datos.Add(apellidoEncargado);

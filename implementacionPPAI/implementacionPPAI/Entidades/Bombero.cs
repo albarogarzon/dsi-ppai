@@ -11,11 +11,20 @@ namespace implementacionPPAI.Entidades
         private bool activo;
         private string apellido;
         private string direccion;
-        private int dni;
+        private string dni;
         private string email;
         private string nombre;
-        private int telefono;
-
+        private string telefono;
+        
+        public Bombero(bool activo, string nombre, string apellido, string direccion, string dni, string email, string telefono){
+            this.activo = activo;
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.direccion = direccion;
+            this.dni = dni;
+            this.email = email;
+            this.telefono = telefono;
+        }
     
         public string getNombre(){
             return this.nombre;
