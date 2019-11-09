@@ -40,6 +40,10 @@ namespace implementacionPPAI.Entidades
         public bool esEnCurso(){
             return this.estado.esEnCurso();
         }
+
+        public bool esFinalizada(){
+            return this.estado.esFinalizada();
+        }
     }
 
 }
