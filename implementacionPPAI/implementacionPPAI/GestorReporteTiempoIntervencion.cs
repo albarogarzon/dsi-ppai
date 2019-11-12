@@ -15,9 +15,11 @@ namespace implementacionPPAI.Entidades
         private List<Intervencion> intervenciones, intervencionesFinalizadas, intervencionesFiltradasPorGravedadYSiniestro, intervencionesFiltradas;
         private List<List<string>> datosIntervenciones;
         private TimeSpan promedioDuracion;
+        
        
         public GestorReporteTiempoIntervencion()
         {
+          
             this.duracionIntervenciones = new List<TimeSpan>();
             this.intervencionesFinalizadas = new List<Intervencion>();
             this.intervencionesFiltradas = new List<Intervencion>();

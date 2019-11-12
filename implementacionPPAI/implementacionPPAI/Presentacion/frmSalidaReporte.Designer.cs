@@ -1,6 +1,6 @@
 ﻿namespace implementacionPPAI.Presentacion
 {
-    partial class frmSalidaReporte
+    partial class FrmSalidaReporte
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxFechaDesde = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,8 +37,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -53,12 +51,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Reporte de tiempo promedio de duracion de intervenciones  entre el ";
             // 
-            // textBox1
+            // textBoxFechaDesde
             // 
-            this.textBox1.Location = new System.Drawing.Point(348, 6);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.textBoxFechaDesde.Location = new System.Drawing.Point(348, 6);
+            this.textBoxFechaDesde.Name = "textBoxFechaDesde";
+            this.textBoxFechaDesde.Size = new System.Drawing.Size(100, 20);
+            this.textBoxFechaDesde.TabIndex = 1;
             // 
             // label2
             // 
@@ -106,8 +104,6 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.Column2,
-            this.Column3,
             this.Column4,
             this.Column5});
             this.dataGridView1.Location = new System.Drawing.Point(15, 152);
@@ -120,16 +116,6 @@
             this.Column1.HeaderText = "Descripcion";
             this.Column1.Name = "Column1";
             // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Duracion";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Tipo de siniestro";
-            this.Column3.Name = "Column3";
-            // 
             // Column4
             // 
             this.Column4.HeaderText = "Encargado de intervencion";
@@ -140,7 +126,7 @@
             this.Column5.HeaderText = "Cantidad de dotaciones";
             this.Column5.Name = "Column5";
             // 
-            // frmSalidaReporte
+            // FrmSalidaReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -151,9 +137,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxFechaDesde);
             this.Controls.Add(this.label1);
-            this.Name = "frmSalidaReporte";
+            this.Name = "FrmSalidaReporte";
             this.Text = "frmSalidaReporte";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -164,7 +150,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxFechaDesde;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
@@ -172,8 +158,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }

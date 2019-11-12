@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using implementacionPPAI.Presentacion;
 
 namespace implementacionPPAI
 {
@@ -15,11 +16,11 @@ namespace implementacionPPAI
         }
 
         public void construir(TimeSpan tiempoPromedio, List<List<string>> datosIntervenciones, DateTime fechaHoraDesdePeriodo, DateTime fechaHoraHastaPeriodo, List<string> nombresTipoSiniestro, List<string> nombresTipoGravedad, string tiempoAnalizar){
-            //TODO 
-            //esta bien??
-            constructor.obtenerProducto();
-            constructor.construirDetalleIntervenciones(datosIntervenciones);
+          
+            constructor.construirProducto();
             constructor.construirEncabezado(tiempoPromedio,fechaHoraDesdePeriodo,fechaHoraHastaPeriodo,nombresTipoSiniestro,nombresTipoGravedad,tiempoAnalizar);
+            constructor.construirDetalleIntervenciones(datosIntervenciones);
+            
             constructor.obtenerProducto();
         }
 

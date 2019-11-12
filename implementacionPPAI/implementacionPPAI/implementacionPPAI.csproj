@@ -57,11 +57,11 @@
     <Compile Include="Entidades\HistorialIntervencion.cs" />
     <Compile Include="Entidades\Intervencion.cs" />
     <Compile Include="Entidades\TipoSiniestro.cs" />
-    <Compile Include="Presentacion\frmSalidaReporte.cs">
+    <Compile Include="Presentacion\FrmSalidaReporte.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\frmSalidaReporte.Designer.cs">
-      <DependentUpon>frmSalidaReporte.cs</DependentUpon>
+    <Compile Include="Presentacion\FrmSalidaReporte.Designer.cs">
+      <DependentUpon>FrmSalidaReporte.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\PantallaInicio.cs">
       <SubType>Form</SubType>
@@ -77,14 +77,13 @@
     </Compile>
     <Compile Include="GestorReporteTiempoIntervencion.cs" />
     <Compile Include="IConstructorInformeTI.cs" />
-    <Compile Include="InformeTiemposIntervencion.cs" />
     <Compile Include="InformeTiemposIntervecionesExcel.cs" />
     <Compile Include="InformeTiemposIntervecionesPDF.cs" />
     <Compile Include="PantallaVisualizacionInformeTI.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Presentacion\frmSalidaReporte.resx">
-      <DependentUpon>frmSalidaReporte.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\FrmSalidaReporte.resx">
+      <DependentUpon>FrmSalidaReporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\PantallaInicio.resx">
       <DependentUpon>PantallaInicio.cs</DependentUpon>

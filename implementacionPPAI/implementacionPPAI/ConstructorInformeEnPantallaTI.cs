@@ -3,27 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using implementacionPPAI.Presentacion;
 
 namespace implementacionPPAI
 {
     class ConstructorInformeEnPantallaTI : IConstructorInformeTI
     {
+        private FrmSalidaReporte reporte;
         public void construirDetalleIntervenciones(List<List<string>> datosIntervenciones)
         {
-            throw new NotImplementedException();
+            reporte.setDetalleIntervenciones(datosIntervenciones);
         }
 
         public void construirEncabezado(TimeSpan tiempoPromedio, DateTime fechaHoraDesdePeriodo, DateTime fechaHoraHastaPeriodo, List<string> nombreTipoSiniestro, List<string> nombreTipoGravedad, string tiempoAnalizar)
         {
-            throw new NotImplementedException();
+            reporte.setEncabezado(tiempoPromedio, fechaHoraDesdePeriodo, fechaHoraHastaPeriodo, nombreTipoSiniestro, nombreTipoGravedad, tiempoAnalizar);
+            
         }
 
-        public InformeTiemposIntervencion construirProducto()
+        public FrmSalidaReporte construirProducto()
         {
-            throw new NotImplementedException();
+            this.reporte = new FrmSalidaReporte();
+             
+            return reporte;
         }
 
-        public InformeTiemposIntervencion obtenerProducto()
+        public FrmSalidaReporte obtenerProducto()
         {
             throw new NotImplementedException();
         }
