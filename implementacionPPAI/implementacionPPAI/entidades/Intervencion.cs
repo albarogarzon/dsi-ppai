@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace implementacionPPAI.Entidades
 {
@@ -49,6 +50,7 @@ namespace implementacionPPAI.Entidades
             }
                     
             duracion = fechaHoraHasta.Subtract(fechaHoraDesde);
+            MessageBox.Show(Convert.ToString(duracion));
 
             return duracion;
         }
