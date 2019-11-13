@@ -60,7 +60,7 @@ namespace implementacionPPAI.Entidades
             historiales1.Add(h5);
 
             //Historiales intervencion 2
-            HistorialIntervencion h6 = new HistorialIntervencion(new DateTime(2019,11,26,20,30,0), new DateTime(2019,9,26,20,40,0), programada);
+            HistorialIntervencion h6 = new HistorialIntervencion(new DateTime(2019,9,26,20,30,0), new DateTime(2019,9,26,20,40,0), programada);
             HistorialIntervencion h7 = new HistorialIntervencion(new DateTime(2019,9,26,20,40,0), new DateTime(2019,9,26,20,55,0), convocada);
             HistorialIntervencion h8 = new HistorialIntervencion(new DateTime(2019,9,26,20,55,0), new DateTime(2019,9,26,23,40,0), enCurso);
             HistorialIntervencion h9 = new HistorialIntervencion(new DateTime(2019,9,26,23,40,0), new DateTime(2019,9,26,23,45,0), finalizada);
@@ -74,11 +74,11 @@ namespace implementacionPPAI.Entidades
             historiales2.Add(h10);
 
             //Historiales intervencion 3
-            HistorialIntervencion h11 = new HistorialIntervencion(new DateTime(2019,7,26,10,30,0), new DateTime(2019,9,26,10,40,0), programada);
-            HistorialIntervencion h12 = new HistorialIntervencion(new DateTime(2019,7,26,10,40,0), new DateTime(2019,9,26,10,55,0), convocada);
-            HistorialIntervencion h13 = new HistorialIntervencion(new DateTime(2019,7,26,10,55,0), new DateTime(2019,9,26,15,40,0), enCurso);
-            HistorialIntervencion h14 = new HistorialIntervencion(new DateTime(2019,7,26,15,40,0), new DateTime(2019,9,26,15,45,0), finalizada);
-            HistorialIntervencion h15 = new HistorialIntervencion(new DateTime(2019,7,26,15,45,0), new DateTime(2019,9,26,15,47,0), firmada);
+            HistorialIntervencion h11 = new HistorialIntervencion(new DateTime(2019,7,26,10,30,0), new DateTime(2019,7,26,10,40,0), programada);
+            HistorialIntervencion h12 = new HistorialIntervencion(new DateTime(2019,7,26,10,40,0), new DateTime(2019,7,26,10,55,0), convocada);
+            HistorialIntervencion h13 = new HistorialIntervencion(new DateTime(2019,7,26,10,55,0), new DateTime(2019,7,26,15,40,0), enCurso);
+            HistorialIntervencion h14 = new HistorialIntervencion(new DateTime(2019,7,26,15,40,0), new DateTime(2019,7,26,15,45,0), finalizada);
+            HistorialIntervencion h15 = new HistorialIntervencion(new DateTime(2019,7,26,15,45,0), new DateTime(2019,7,26,15,47,0), firmada);
 
             List<HistorialIntervencion> historiales3 = new List<HistorialIntervencion>();
             historiales3.Add(h11);

@@ -43,12 +43,11 @@ namespace implementacionPPAI.Presentacion
             this.settiempoAAnalizar(tiempoAnalizar);
         }
 
-        public void setDetalleIntervenciones(List<List<string>> datosIntervenciones)
+        public void setDetalleIntervenciones(List<string> datosIntervenciones)
         {
-            foreach(List<string> datos in datosIntervenciones)
-            {
-                dataGridView1.Rows.Add(datos);
-            }
+
+            dataGridView1.DataSource = datosIntervenciones.ToList();
+
 
         }
         public void setFechaDesde(DateTime fechaDesde)
@@ -84,8 +83,8 @@ namespace implementacionPPAI.Presentacion
         {
             string gravedades = "";
             string siniestros = "";
-            textBoxFechaDesde.Text = fechaDesde.ToString();
-            textBoxFechaHasta.Text = fechaFin.ToString();
+            textBoxFechaDesde.Text = fechaDesde.ToString("d");
+            textBoxFechaHasta.Text = fechaFin.ToString("d");
             textBoxPromedioDuracion.Text = tiempoPromedio.ToString();
             foreach(string gravedad in tipoGravedad)
             {

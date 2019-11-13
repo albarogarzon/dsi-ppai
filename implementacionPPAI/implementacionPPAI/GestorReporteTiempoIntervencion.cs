@@ -20,7 +20,7 @@ namespace implementacionPPAI.Entidades
         
         
        
-        public GestorReporteTiempoIntervencion()
+        public GestorReporteTiempoIntervencion()    
         {
           
             this.duracionIntervenciones = new List<TimeSpan>();
@@ -94,7 +94,7 @@ namespace implementacionPPAI.Entidades
 
         public void buscarIntervencionesFinalizadas(){
             foreach(Intervencion intervencion in this.intervenciones){
-                if (intervencion.esFinalizada() || intervencion.finalizo()){
+                if ((intervencion.esFinalizada()) || (intervencion.finalizo())){
                     this.intervencionesFinalizadas.Add(intervencion);
                 }
             } 
@@ -103,7 +103,7 @@ namespace implementacionPPAI.Entidades
         public bool filtrarIntervencionesPorGravedadYSiniestro(){
             bool existen = false;
             foreach(Intervencion intervencion in this.intervencionesFinalizadas){
-               if(seleccionTipoSiniestro.Contains(intervencion.getNombreTipoSiniestro()) && seleccionGravedad.Contains(intervencion.getNombreGravedad())){
+               if((seleccionTipoSiniestro.Contains(intervencion.getNombreTipoSiniestro())) && (seleccionGravedad.Contains(intervencion.getNombreGravedad()))){
                    this.intervencionesFiltradasPorGravedadYSiniestro.Add(intervencion);
                     existen = true;
                }

@@ -12,7 +12,11 @@ namespace implementacionPPAI
         private FrmSalidaReporte reporte;
         public void construirDetalleIntervenciones(List<List<string>> datosIntervenciones)
         {
-            reporte.setDetalleIntervenciones(datosIntervenciones);
+            foreach(List<string> datoIntervencion in datosIntervenciones)
+            {
+                reporte.setDetalleIntervenciones(datoIntervencion);
+            }
+            
             reporte.inicializarReporte();
         }
 

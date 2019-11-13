@@ -55,7 +55,7 @@ namespace implementacionPPAI.Entidades
         }
 
         public bool esFinalizada(){
-            if(this.getNombre() == "Finalizada"){
+            if(this.getNombre().Equals("Finalizada")){
                 return true;
             }else{
                 return true;
