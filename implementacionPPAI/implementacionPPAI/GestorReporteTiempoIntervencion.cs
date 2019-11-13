@@ -11,7 +11,8 @@ namespace implementacionPPAI.Entidades
     public class GestorReporteTiempoIntervencion
     {
         private DateTime fechaHoraDesdePeriodo, fechaHoraHastaPeriodo;
-        private List<string> seleccionTipoSiniestro, seleccionGravedad;
+        private List<string> seleccionTipoSiniestro; 
+        private List<string> seleccionGravedad;
         private string seleccionTiempoAnalizar;
         private List<TimeSpan> duracionIntervenciones;
         private List<Intervencion> intervenciones, intervencionesFinalizadas, intervencionesFiltradasPorGravedadYSiniestro, intervencionesFiltradas;

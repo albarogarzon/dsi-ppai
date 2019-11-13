@@ -14,6 +14,7 @@ namespace implementacionPPAI
         {
             foreach(List<string> datoIntervencion in datosIntervenciones)
             {
+               
                 reporte.setDetalleIntervenciones(datoIntervencion);
             }
             

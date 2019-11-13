@@ -39,7 +39,7 @@ namespace implementacionPPAI.Presentacion
             this.setFechaFin(fechaHoraHastaPeriodo);
             this.setTiempoPromedio(tiempoPromedio);
             this.setTipoGravedad(nombreTipoGravedad);
-            this.setTipoSiniestro(nombreTipoGravedad);
+            this.setTipoSiniestro(nombreTipoSiniestro);
             this.settiempoAAnalizar(tiempoAnalizar);
         }
 
