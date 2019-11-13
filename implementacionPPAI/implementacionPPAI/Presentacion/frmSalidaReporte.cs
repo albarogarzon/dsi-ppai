@@ -46,7 +46,7 @@ namespace implementacionPPAI.Presentacion
         public void setDetalleIntervenciones(List<string> datosIntervenciones)
         {
 
-            dataGridView1.DataSource = datosIntervenciones.ToList();
+            dataGridView1.Rows.Add(datosIntervenciones);
 
 
         }
@@ -100,7 +100,9 @@ namespace implementacionPPAI.Presentacion
             
         }
 
-        
-        
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
