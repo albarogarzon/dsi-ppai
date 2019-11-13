@@ -12,12 +12,24 @@ namespace implementacionPPAI
         private FrmSalidaReporte reporte;
         public void construirDetalleIntervenciones(List<List<string>> datosIntervenciones)
         {
+            
+            List<Dato> datos = new List<Dato>();
+            string descripcion;
+            string nombre;
+            string apellido;
+            string cantDotaciones;
             foreach(List<string> datoIntervencion in datosIntervenciones)
             {
-               
-                reporte.setDetalleIntervenciones(datoIntervencion);
+                descripcion = datoIntervencion[0];
+                nombre = datoIntervencion[1];
+                apellido = datoIntervencion[2];
+                cantDotaciones = datoIntervencion[3];
+                datos.Add(new Dato(descripcion, nombre, apellido, cantDotaciones));
             }
-            
+
+                
+            reporte.setDetalleIntervenciones(datos);
+
             reporte.inicializarReporte();
         }
 
@@ -38,5 +50,7 @@ namespace implementacionPPAI
         {
             return reporte;
         }
+
+       
     }
 }

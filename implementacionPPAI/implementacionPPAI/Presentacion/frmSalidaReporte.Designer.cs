@@ -42,10 +42,6 @@
             this.txtGravedad = new System.Windows.Forms.TextBox();
             this.txtSiniestro = new System.Windows.Forms.TextBox();
             this.txtTiempoAnalizar = new System.Windows.Forms.TextBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,11 +105,6 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column4,
-            this.Column2Apellido,
-            this.Column5});
             this.dataGridView1.Location = new System.Drawing.Point(15, 233);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(620, 150);
@@ -168,26 +159,6 @@
             this.txtTiempoAnalizar.Size = new System.Drawing.Size(100, 20);
             this.txtTiempoAnalizar.TabIndex = 13;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Descripcion";
-            this.Column1.Name = "Column1";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Nombre Encargado";
-            this.Column4.Name = "Column4";
-            // 
-            // Column2Apellido
-            // 
-            this.Column2Apellido.HeaderText = "Apellido Encargado";
-            this.Column2Apellido.Name = "Column2Apellido";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Cantidad de dotaciones";
-            this.Column5.Name = "Column5";
-            // 
             // FrmSalidaReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,9 +202,5 @@
         private System.Windows.Forms.TextBox txtGravedad;
         private System.Windows.Forms.TextBox txtSiniestro;
         private System.Windows.Forms.TextBox txtTiempoAnalizar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2Apellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

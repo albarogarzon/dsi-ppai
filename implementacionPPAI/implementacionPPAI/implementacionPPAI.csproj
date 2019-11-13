@@ -48,6 +48,7 @@
     <Compile Include="ConstructorInformeEnPantallaTI.cs" />
     <Compile Include="ConstructorInformeExcelTI.cs" />
     <Compile Include="ConstructorInformePDFTI.cs" />
+    <Compile Include="Dato.cs" />
     <Compile Include="DirectorConstruccionInformeTiemposInterveciones.cs" />
     <Compile Include="Entidades\Bombero.cs" />
     <Compile Include="Entidades\Creacion.cs" />

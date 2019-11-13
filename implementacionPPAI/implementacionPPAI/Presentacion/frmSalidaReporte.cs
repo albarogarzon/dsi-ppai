@@ -43,10 +43,10 @@ namespace implementacionPPAI.Presentacion
             this.settiempoAAnalizar(tiempoAnalizar);
         }
 
-        public void setDetalleIntervenciones(List<string> datosIntervenciones)
+        public void setDetalleIntervenciones(List<Dato> datosIntervenciones)
         {
 
-            dataGridView1.Rows.Add(datosIntervenciones);
+            dataGridView1.DataSource = datosIntervenciones;
 
 
         }
@@ -99,6 +99,8 @@ namespace implementacionPPAI.Presentacion
             txtTiempoAnalizar.Text = tiempoAAnalizar;
             
         }
+
+        
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
