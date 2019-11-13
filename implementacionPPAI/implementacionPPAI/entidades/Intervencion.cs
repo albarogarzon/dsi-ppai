@@ -39,7 +39,7 @@ namespace implementacionPPAI.Entidades
 
        
         public TimeSpan calcularDuracion(){
-            TimeSpan duracion = new TimeSpan();
+            TimeSpan tiempoDeDuracion = new TimeSpan();
             DateTime fechaHoraDesde = new DateTime();
             DateTime fechaHoraHasta = new DateTime();
             for(int i = 0; i< historiales.Count(); i++){
@@ -49,10 +49,10 @@ namespace implementacionPPAI.Entidades
                 }
             }
                     
-            duracion = fechaHoraHasta.Subtract(fechaHoraDesde);
-            MessageBox.Show(Convert.ToString(duracion));
+            tiempoDeDuracion = fechaHoraHasta.Subtract(fechaHoraDesde);
+            MessageBox.Show(tiempoDeDuracion.ToString());
 
-            return duracion;
+            return tiempoDeDuracion;
         }
 
         public bool esFinalizada(){
@@ -79,18 +79,22 @@ namespace implementacionPPAI.Entidades
         public bool finalizoEnElPeriodo(DateTime fechaInicioPeriodo, DateTime fechaFinPeriodo)
         {
             DateTime fechaFinIntervencion = new DateTime();
+            bool estaDentroPeriodo = false;
             foreach(HistorialIntervencion historial in this.historiales){
                 if(historial.esFinalizada()){
                     fechaFinIntervencion = historial.getFechaHoraDesde();
-                    break;
+                    if((fechaFinIntervencion >= fechaInicioPeriodo) && (fechaFinIntervencion <= fechaFinPeriodo)){
+                        estaDentroPeriodo = true; ;
+                    }else
+                    {
+                        estaDentroPeriodo = false; ;
+                    }
+
                 }
             }
+            return estaDentroPeriodo;
             
-            if((fechaFinIntervencion >= fechaInicioPeriodo) && (fechaFinIntervencion <= fechaFinPeriodo)){
-                return true;
-            }else{
-                return false;
-            }
+            
             
         }
 
