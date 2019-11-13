@@ -119,7 +119,7 @@
             this.chkTiposSiniestros.FormattingEnabled = true;
             this.chkTiposSiniestros.Items.AddRange(new object[] {
             "Incendio",
-            "Accidente",
+            "Accidente vial",
             "Rescate",
             "Evacuacion"});
             this.chkTiposSiniestros.Location = new System.Drawing.Point(15, 179);
@@ -168,9 +168,9 @@
             this.chkNivelesGravedad.BackColor = System.Drawing.SystemColors.Menu;
             this.chkNivelesGravedad.FormattingEnabled = true;
             this.chkNivelesGravedad.Items.AddRange(new object[] {
-            "Alto",
-            "Medio",
-            "Bajo"});
+            "Alta",
+            "Media",
+            "Baja"});
             this.chkNivelesGravedad.Location = new System.Drawing.Point(17, 271);
             this.chkNivelesGravedad.Name = "chkNivelesGravedad";
             this.chkNivelesGravedad.Size = new System.Drawing.Size(120, 64);

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using implementacionPPAI.Presentacion;
 
 namespace implementacionPPAI.Entidades
 {
@@ -15,6 +16,7 @@ namespace implementacionPPAI.Entidades
         private List<Intervencion> intervenciones, intervencionesFinalizadas, intervencionesFiltradasPorGravedadYSiniestro, intervencionesFiltradas;
         private List<List<string>> datosIntervenciones;
         private TimeSpan promedioDuracion;
+        
         
        
         public GestorReporteTiempoIntervencion()
@@ -129,7 +131,9 @@ namespace implementacionPPAI.Entidades
             ConstructorInformeEnPantallaTI constructorInformePantalla = new ConstructorInformeEnPantallaTI();
             DirectorConstruccionInformeTiemposInterveciones directorConstruccionInforme = new DirectorConstruccionInformeTiemposInterveciones(constructorInformePantalla);
             directorConstruccionInforme.construir(this.promedioDuracion, this.datosIntervenciones, this.fechaHoraDesdePeriodo, this.fechaHoraHastaPeriodo, this.seleccionTipoSiniestro, this.seleccionGravedad, this.seleccionTiempoAnalizar);
-
+            FrmSalidaReporte pantallaReporte = constructorInformePantalla.obtenerProducto();
+            
+            pantallaReporte.ShowDialog();
         }
 
             
@@ -151,6 +155,7 @@ namespace implementacionPPAI.Entidades
         }
         public void setSeleccionTiempoAnalizar(string tiempoAnalizar){
             this.seleccionTiempoAnalizar = tiempoAnalizar;
+
         }
     }
       

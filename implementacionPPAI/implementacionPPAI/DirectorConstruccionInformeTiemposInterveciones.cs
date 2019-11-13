@@ -21,7 +21,7 @@ namespace implementacionPPAI
             constructor.construirEncabezado(tiempoPromedio,fechaHoraDesdePeriodo,fechaHoraHastaPeriodo,nombresTipoSiniestro,nombresTipoGravedad,tiempoAnalizar);
             constructor.construirDetalleIntervenciones(datosIntervenciones);
             
-            constructor.obtenerProducto();
+           
         }
 
     }

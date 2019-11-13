@@ -15,11 +15,21 @@ namespace implementacionPPAI
     {
 
         private GestorReporteTiempoIntervencion gr;
-
+        private List<string> listaTipoSiniestro;
+        private List<string> listaGravedad;
+        private DateTime fechaHoraDesde;
+        private DateTime fechaHoraHasta;
+        private string tiempoAnalizar;
         public PantallaReporteTI()
         {
-            InitializeComponent();
+            this.listaTipoSiniestro = new List<string>();
+            this.listaGravedad = new List<string>();
+            this.fechaHoraDesde = new DateTime();
+            this.fechaHoraHasta = new DateTime();
+            this.tiempoAnalizar = "";
             gr = new GestorReporteTiempoIntervencion();
+            InitializeComponent();
+            
 
         }
 
@@ -34,19 +44,19 @@ namespace implementacionPPAI
             {
                 MessageBox.Show("ok", "Alerta");
 
-                DateTime fechaHoraDesde =Convert.ToDateTime(dtpDesde);
-                DateTime fechaHoraHasta = Convert.ToDateTime(dtpHasta);
+                fechaHoraDesde =Convert.ToDateTime(dtpDesde);
+                fechaHoraHasta = Convert.ToDateTime(dtpHasta);
 
                 gr.tomarSeleccionPeriodo(fechaHoraDesde, fechaHoraHasta);
 
-                List<string> listaTipoSiniestro = chkTiposSiniestros.CheckedItems.OfType<string>().ToList();
+                listaTipoSiniestro = chkTiposSiniestros.CheckedItems.OfType<string>().ToList();
                 
                 gr.tomarSeleccionTipoSiniestro(listaTipoSiniestro);
 
-                List<string> listaGravedad = chkNivelesGravedad.CheckedItems.OfType<string>().ToList();
+                listaGravedad = chkNivelesGravedad.CheckedItems.OfType<string>().ToList();
                 gr.tomarSeleccionGravedad(listaGravedad);
+                
 
-                string tiempoAnalizar = "";
                 if (radioButtonDuracion.Checked)
                 {
                     tiempoAnalizar = "Duracion";

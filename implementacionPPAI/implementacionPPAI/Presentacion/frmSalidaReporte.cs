@@ -79,7 +79,33 @@ namespace implementacionPPAI.Presentacion
         {
             this.tipoSiniestro = tipoSiniestro;
         }
-     
+        
+        public void inicializarReporte()
+        {
+            string gravedades = "";
+            string siniestros = "";
+            textBoxFechaDesde.Text = fechaDesde.ToString();
+            textBoxFechaHasta.Text = fechaFin.ToString();
+            textBoxPromedioDuracion.Text = tiempoPromedio.ToString();
+            foreach(string gravedad in tipoGravedad)
+            {
+                gravedades += gravedad + ", ";
+            }
+            foreach(string siniestro in tipoSiniestro)
+            {
+                siniestros += siniestro + ", ";
+            }
+            txtGravedad.Text = gravedades;
+            txtSiniestro.Text = siniestros;
+            txtTiempoAnalizar.Text = tiempoAAnalizar;
+            
+        }
 
+        public void mostrarReporte()
+        {
+            
+
+        }
+        
     }
 }

@@ -30,7 +30,7 @@ namespace implementacionPPAI
 
         public FrmSalidaReporte obtenerProducto()
         {
-            throw new NotImplementedException();
+            return reporte;
         }
     }
 }
