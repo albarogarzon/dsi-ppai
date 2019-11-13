@@ -13,6 +13,7 @@ namespace implementacionPPAI
         public void construirDetalleIntervenciones(List<List<string>> datosIntervenciones)
         {
             reporte.setDetalleIntervenciones(datosIntervenciones);
+            reporte.inicializarReporte();
         }
 
         public void construirEncabezado(TimeSpan tiempoPromedio, DateTime fechaHoraDesdePeriodo, DateTime fechaHoraHastaPeriodo, List<string> nombreTipoSiniestro, List<string> nombreTipoGravedad, string tiempoAnalizar)

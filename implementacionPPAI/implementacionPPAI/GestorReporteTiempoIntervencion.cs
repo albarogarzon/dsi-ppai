@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using implementacionPPAI.Presentacion;
 
 namespace implementacionPPAI.Entidades
@@ -24,6 +25,8 @@ namespace implementacionPPAI.Entidades
           
             this.duracionIntervenciones = new List<TimeSpan>();
             this.intervencionesFinalizadas = new List<Intervencion>();
+            this.intervencionesFiltradasPorGravedadYSiniestro = new List<Intervencion>();
+            this.datosIntervenciones = new List<List<string>>();
             this.intervencionesFiltradas = new List<Intervencion>();
             this.seleccionGravedad = new List<string>();
             this.seleccionTipoSiniestro = new List<string>();
@@ -57,15 +60,35 @@ namespace implementacionPPAI.Entidades
 
         public void tomarConfirmacionFiltros()
         {
+            bool flag1;
+            bool flag2;
             Creacion creador = new Creacion();
             intervenciones = creador.crear();
                 
             this.buscarIntervencionesFinalizadas();
-            this.filtrarIntervencionesPorGravedadYSiniestro(); // Lanzar mensaje si no econtro
-            this.filtrarIntervencionesPorPeriodoSeleccionado();// Lanzar mensaje si no encontro
+            
+            flag1 = this.filtrarIntervencionesPorGravedadYSiniestro(); // Lanzar mensaje si no econtro
+            if (!flag1)
+            {
+                MessageBox.Show("No se encontro intervencion con esa gravedad y siniestro", "Alerta");
+            }
+            else
+            {
+                MessageBox.Show("si se encontro intervencion con esa gravedad y siniestro", "Alerta");
+            }
+            flag2 = this.filtrarIntervencionesPorPeriodoSeleccionado();// Lanzar mensaje si no encontro
+            if (!flag2)
+            {
+                MessageBox.Show("No se encontro intervencion en ese periodo", "Alerta");
+            }
+            else
+            {
+                MessageBox.Show("si se encontro intervencion en ese periodo", "Alerta");
+            }
             this.obtenerDuracionIntervenciones();
             this.obtenerDatosIntervenciones();
             this.calcularPromedioDuracionIntervenciones();
+            this.generarReporte();
         }
 
 

@@ -101,11 +101,7 @@ namespace implementacionPPAI.Presentacion
             
         }
 
-        public void mostrarReporte()
-        {
-            
-
-        }
+        
         
     }
 }

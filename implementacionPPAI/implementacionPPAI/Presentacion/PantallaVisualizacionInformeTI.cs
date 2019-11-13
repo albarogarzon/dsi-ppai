@@ -42,10 +42,10 @@ namespace implementacionPPAI
 
             if (validarPeriodo())
             {
-                MessageBox.Show("ok", "Alerta");
+                
 
-                fechaHoraDesde =Convert.ToDateTime(dtpDesde);
-                fechaHoraHasta = Convert.ToDateTime(dtpHasta);
+                fechaHoraDesde = dtpDesde.Value.Date;
+                fechaHoraHasta = dtpHasta.Value.Date;
 
                 gr.tomarSeleccionPeriodo(fechaHoraDesde, fechaHoraHasta);
 
