@@ -50,9 +50,9 @@ namespace implementacionPPAI.Entidades
             }
                     
             tiempoDeDuracion = fechaHoraHasta.Subtract(fechaHoraDesde);
-            MessageBox.Show(tiempoDeDuracion.ToString());
-
             return tiempoDeDuracion;
+            
+
         }
 
         public bool esFinalizada(){

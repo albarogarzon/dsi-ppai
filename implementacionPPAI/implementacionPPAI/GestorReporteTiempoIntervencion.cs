@@ -61,36 +61,26 @@ namespace implementacionPPAI.Entidades
 
         public void tomarConfirmacionFiltros()
         {
-            bool flag1;
-            bool flag2;
+            
             Creacion creador = new Creacion();
             intervenciones = creador.crear();
                 
             this.buscarIntervencionesFinalizadas();
-            
-            flag1 = this.filtrarIntervencionesPorGravedadYSiniestro(); // Lanzar mensaje si no econtro
-            if (!flag1)
-            {
-                MessageBox.Show("No se encontro intervencion con esa gravedad y siniestro", "Alerta");
-            }
-            else
-            {
-                MessageBox.Show("si se encontro intervencion con esa gravedad y siniestro", "Alerta");
-            }
-            flag2 = this.filtrarIntervencionesPorPeriodoSeleccionado();// Lanzar mensaje si no encontro
-            if (!flag2)
-            {
-                MessageBox.Show("No se encontro intervencion en ese periodo", "Alerta");
-            }
-            else
-            {
-                MessageBox.Show("si se encontro intervencion en ese periodo", "Alerta");
-            }
+            this.filtrarIntervencionesPorGravedadYSiniestro(); // Lanzar mensaje si no econtro
+            this.filtrarIntervencionesPorPeriodoSeleccionado();// Lanzar mensaje si no encontro
             this.obtenerDuracionIntervenciones();
             this.obtenerDatosIntervenciones();
             this.calcularPromedioDuracionIntervenciones();
             this.generarReporte();
         }
+            
+            
+            
+           
+             
+            
+                
+            
 
 
         public void buscarIntervencionesFinalizadas(){

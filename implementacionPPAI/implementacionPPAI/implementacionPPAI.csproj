@@ -80,7 +80,6 @@
     <Compile Include="IConstructorInformeTI.cs" />
     <Compile Include="InformeTiemposIntervecionesExcel.cs" />
     <Compile Include="InformeTiemposIntervecionesPDF.cs" />
-    <Compile Include="PantallaVisualizacionInformeTI.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Presentacion\FrmSalidaReporte.resx">
